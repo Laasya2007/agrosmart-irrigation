@@ -1,0 +1,209 @@
+{
+  "zones": [
+    {
+      "id": "NS",
+      "name": "North Sikkim",
+      "description": "High-altitude region with alpine terrain, limited agricultural activity.",
+      "coordinates": { "lat": 27.5, "lon": 88.5 },
+      "suitable_crops": ["Medicinal Plants", "Barley"],
+      "climate": {
+        "temperature": { "min": -5, "max": 15 },
+        "precipitation": { "annual_mm": 1200 },
+        "humidity": { "avg": 70 }
+      }
+    },
+    {
+      "id": "ES",
+      "name": "East Sikkim",
+      "description": "Moderate elevation with mixed forest cover and urban areas.",
+      "coordinates": { "lat": 27.3, "lon": 88.6 },
+      "suitable_crops": ["Maize", "Cardamom", "Vegetables"],
+      "climate": {
+        "temperature": { "min": 10, "max": 25 },
+        "precipitation": { "annual_mm": 1500 },
+        "humidity": { "avg": 75 }
+      }
+    },
+    {
+      "id": "SS",
+      "name": "South Sikkim",
+      "description": "Lower elevation with fertile soil, extensive agricultural activity.",
+      "coordinates": { "lat": 27.2, "lon": 88.6 },
+      "suitable_crops": ["Paddy", "Vegetables", "Fruits"],
+      "climate": {
+        "temperature": { "min": 15, "max": 30 },
+        "precipitation": { "annual_mm": 1800 },
+        "humidity": { "avg": 80 }
+      }
+    },
+    {
+      "id": "WS",
+      "name": "West Sikkim",
+      "description": "Varied elevation with forest and agricultural land.",
+      "coordinates": { "lat": 27.3, "lon": 88.2 },
+      "suitable_crops": ["Maize", "Millet", "Vegetables"],
+      "climate": {
+        "temperature": { "min": 12, "max": 28 },
+        "precipitation": { "annual_mm": 1600 },
+        "humidity": { "avg": 78 }
+      }
+    }
+  ],
+  "crops": {
+    "paddy": {
+      "name": "Paddy",
+      "description": "Staple cereal crop grown in South Sikkim, requires high water availability.",
+      "growth_stages": [
+        {
+          "stage": "Germination",
+          "duration_days": 7,
+          "temperature_range_C": { "min": 20, "max": 35 },
+          "water_requirement_mm_per_day": 50,
+          "moisture_optimum_percent": 80,
+          "soil_type": ["Clay", "Loamy"]
+        },
+        {
+          "stage": "Tillering",
+          "duration_days": 30,
+          "temperature_range_C": { "min": 20, "max": 35 },
+          "water_requirement_mm_per_day": 100,
+          "moisture_optimum_percent": 85,
+          "soil_type": ["Clay", "Loamy"]
+        },
+        {
+          "stage": "Heading",
+          "duration_days": 20,
+          "temperature_range_C": { "min": 20, "max": 35 },
+          "water_requirement_mm_per_day": 75,
+          "moisture_optimum_percent": 80,
+          "soil_type": ["Clay", "Loamy"]
+        },
+        {
+          "stage": "Maturity",
+          "duration_days": 30,
+          "temperature_range_C": { "min": 20, "max": 35 },
+          "water_requirement_mm_per_day": 60,
+          "moisture_optimum_percent": 75,
+          "soil_type": ["Clay", "Loamy"]
+        }
+      ],
+      "total_growth_days": 87,
+      "recommended_irrigation_frequency_days": 2,
+      "notes": "Ensure paddy fields remain flooded during early and mid-growth stages; monitor soil moisture closely."
+    },
+    "cardamom": {
+      "name": "Cardamom",
+      "description": "Spice crop cultivated mainly in mid-elevation regions, sensitive to soil moisture and temperature.",
+      "growth_stages": [
+        {
+          "stage": "Germination",
+          "duration_days": 30,
+          "temperature_range_C": { "min": 18, "max": 30 },
+          "water_requirement_mm_per_day": 40,
+          "moisture_optimum_percent": 85,
+          "soil_type": ["Loamy", "Well-drained"]
+        },
+        {
+          "stage": "Vegetative",
+          "duration_days": 60,
+          "temperature_range_C": { "min": 18, "max": 30 },
+          "water_requirement_mm_per_day": 80,
+          "moisture_optimum_percent": 85,
+          "soil_type": ["Loamy", "Well-drained"]
+        },
+        {
+          "stage": "Flowering",
+          "duration_days": 30,
+          "temperature_range_C": { "min": 18, "max": 30 },
+          "water_requirement_mm_per_day": 60,
+          "moisture_optimum_percent": 80,
+          "soil_type": ["Loamy", "Well-drained"]
+        },
+        {
+          "stage": "Maturity",
+          "duration_days": 90,
+          "temperature_range_C": { "min": 18, "max": 30 },
+          "water_requirement_mm_per_day": 100,
+          "moisture_optimum_percent": 80,
+          "soil_type": ["Loamy", "Well-drained"]
+        }
+      ],
+      "total_growth_days": 210,
+      "recommended_irrigation_frequency_days": 3,
+      "notes": "Cardamom prefers well-drained soil; avoid waterlogging; maintain shade and monitor humidity."
+    },
+    "orange": {
+      "growth_stages": [
+        { "stage": "Planting", "duration_days": 30, "water_requirement_mm": 60 },
+        { "stage": "Vegetative", "duration_days": 120, "water_requirement_mm": 80 },
+        { "stage": "Flowering", "duration_days": 45, "water_requirement_mm": 70 },
+        { "stage": "Fruiting", "duration_days": 180, "water_requirement_mm": 90 }
+      ],
+      "temperature": { "min": 15, "max": 30 },
+      "moisture": { "optimum": 70 },
+      "soil_type": ["Well-drained", "Sandy-loam"]
+    },
+    "ginger": {
+      "growth_stages": [
+        { "stage": "Planting", "duration_days": 21, "water_requirement_mm": 45 },
+        { "stage": "Sprouting", "duration_days": 60, "water_requirement_mm": 65 },
+        { "stage": "Vegetative", "duration_days": 120, "water_requirement_mm": 85 },
+        { "stage": "Maturity", "duration_days": 90, "water_requirement_mm": 70 }
+      ],
+      "temperature": { "min": 20, "max": 30 },
+      "moisture": { "optimum": 75 },
+      "soil_type": ["Well-drained", "Rich-loam"]
+    },
+    "maize": {
+      "growth_stages": [
+        { "stage": "Germination", "duration_days": 10, "water_requirement_mm": 40 },
+        { "stage": "Vegetative", "duration_days": 45, "water_requirement_mm": 70 },
+        { "stage": "Tasseling", "duration_days": 20, "water_requirement_mm": 80 },
+        { "stage": "Maturity", "duration_days": 35, "water_requirement_mm": 60 }
+      ],
+      "temperature": { "min": 18, "max": 32 },
+      "moisture": { "optimum": 65 },
+      "soil_type": ["Well-drained", "Fertile"]
+    }
+  },
+  "climatic_zones": [
+    {
+      "id": "Tropical",
+      "temperature_range": { "min": 25, "max": 35 },
+      "precipitation": { "annual_mm": 1500 },
+      "humidity": { "avg": 80 }
+    },
+    {
+      "id": "Temperate",
+      "temperature_range": { "min": 15, "max": 25 },
+      "precipitation": { "annual_mm": 1200 },
+      "humidity": { "avg": 70 }
+    },
+    {
+      "id": "Alpine",
+      "temperature_range": { "min": -5, "max": 15 },
+      "precipitation": { "annual_mm": 1000 },
+      "humidity": { "avg": 60 }
+    }
+  ],
+  "slope_recommendations": {
+    "high_slope": {
+      "elevation": "above_1500m",
+      "suitable_crops": ["Ginger", "Turmeric", "Large Cardamom", "Medicinal Plants"],
+      "irrigation_frequency": "moderate",
+      "water_retention": "good"
+    },
+    "medium_slope": {
+      "elevation": "800-1500m",
+      "suitable_crops": ["Orange", "Lemon", "Papaya", "Vegetables", "Maize"],
+      "irrigation_frequency": "regular",
+      "water_retention": "moderate"
+    },
+    "low_slope": {
+      "elevation": "below_800m",
+      "suitable_crops": ["Paddy", "Finger Millet", "Leafy Greens", "Potato"],
+      "irrigation_frequency": "high",
+      "water_retention": "low"
+    }
+  }
+}
